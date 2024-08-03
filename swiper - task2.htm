@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      padding-top: 20px ;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 80%;
+      height: 30%;
+      object-fit: cover;
+    }
+
+    h2 {
+      margin: 5px 0;
+    }
+
+    p {
+      display: block;
+      font-size: .8em;
+      display: flex;
+      color: #959595;
+      margin: 5px 0;
+      text-transform: uppercase;
+    }
+
+    button {
+      padding: 8px 20px;
+      font-size: .8em;
+      margin: 5px;
+      letter-spacing: 2px;
+      border: 1px solid #c6c6c6;
+      background-color: transparent;
+    }
+
+    button:hover {
+      color: #fff;
+      border: #000;
+      background-color: #000;
+    }
+
+    .navigation {
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="/img/tur1.jpg" alt="tur1" />
+        <img src="/img/map1" alt="map1" />
+        <h2>Qəbələ</h2>
+        <p>Mədəniyyəti&amp;Tarixi /Təbiəti Gəzməli yerlər/</p>
+        <button>ƏTRAFLI</button>
+      </div>
+      <div class="swiper-slide">
+        <img src="/img/tur2.jpg" alt="tur2" />
+        <img src="/img/map2" alt="map2" />
+        <h2>İsmayıllı</h2>
+        <p>Mədəniyyəti&amp;Tarixi /Təbiəti Gəzməli yerlər/</p>
+        <button>ƏTRAFLI</button>
+      </div>
+      <div class="swiper-slide">
+        <img src="/img/tur3" alt="tur3" />
+        <img src="/img/map3" alt="map3" />
+        <h2>Bakı</h2>
+        <p>Mədəniyyəti&amp;Tarixi /Təbiəti Gəzməli yerlər/</p>
+        <button>ƏTRAFLI</button>
+      </div>
+      <div class="swiper-slide">
+        <img src="/img/tur4.jpg" alt="tur4" />
+        <img src="/img/map4" alt="map4" />
+        <h2>Şəki</h2>
+        <p>Mədəniyyəti&amp;Tarixi /Təbiəti Gəzməli yerlər/</p>
+        <button>ƏTRAFLI</button>
+      </div>
+    </div>
+    <div class="swiper-button-next navigation"></div>
+    <div class="swiper-button-prev navigation"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>
